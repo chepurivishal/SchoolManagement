@@ -1,5 +1,5 @@
 var app = require('../app');
-var BaseService = require('./baseService');
+var BaseService = require('./baseservice');
 
 class ClassService extends BaseService{}
 

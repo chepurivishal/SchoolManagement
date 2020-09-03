@@ -1,5 +1,5 @@
 var app = require('../app');
-var BaseService = require('./baseService');
+var BaseService = require('./baseservice');
 var jwt = require('jsonwebtoken');
 var codes = require('../codes.json');
 var config = require('../config.json');
