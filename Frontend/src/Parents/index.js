@@ -54,7 +54,6 @@ const Parent = ({ match }) => {
             }
         }).then((response) => {
             if (response) {
-                console.log('@@@@@@@@@@@@', response)
                 setName(response.name);
                 setDob(response.dob);
                 setParentName(response.parent.name);

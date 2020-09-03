@@ -33,7 +33,6 @@ StudentModel.prototype.createStudent = (body)=>{
 };
 StudentModel.prototype.getStudents = (opts)=>{
    var model = require('../Database/Student.db');
-   console.log("sssssssssssssss!!!!!!!!!      ", opts);
    var query = {};
    var options = {};
    if(opts) {

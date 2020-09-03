@@ -10,7 +10,7 @@ var corsOptions = {
   optionsSuccessStatus: 200     
 }
 app.use(cors(corsOptions));
-var Port = process.env.Port|| 8080;
+var Port = process.env.PORT || 8080;
 
 if(process.env.NODE_ENV === "production"){
   app.use(express.static('frontend/build'));
