@@ -1,0 +1,11 @@
+{
+    "INV_DETAILS" : "Inavlid Details",
+    "MISSING_BODY": "Missing required details",
+    "ERR_IN_FETCH": "Error in fetching data",
+    "INV_PAYLOAD" : "Missing or Invalid Required fields",
+    "INTERNAL_SERVER_ERR": "Internal Server Error",
+    "LOGIN_FAILED": "Login Failed, UserName or Password is wrong",
+    "INVALID_TOKEN": "Invalid User Token",
+    "TOKEN_REQUIRED": "Bearer Token Required",
+    "INV_ACCESS": "Invalid access to the user"
+}

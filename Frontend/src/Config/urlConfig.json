@@ -1,0 +1,62 @@
+{
+    "login":{
+        "uri": "/school/login",
+        "method": "POST"
+    },
+    "getclasses":{
+        "uri": "/school/api/class",
+        "method" : "GET"
+    },
+    "deleteclass": {
+        "uri" : "/school/api/class/:id",
+        "method" : "DELETE"
+    },
+    "addclass":{
+        "uri" : "/school/api/class",
+        "method":"POST"
+    },
+    "editclass":{
+        "uri": "/school/api/class/:id",
+        "method" : "PUT"
+    },
+    "getclass":{
+        "uri":"/school/api/class/:id",
+        "method": "GET"
+    },
+    "getstudents":{
+        "uri":"/school/api/student",
+        "method": "GET"
+    },
+    "getstudent":{
+        "uri": "/school/api/student/:id",
+        "method": "GET"
+    },
+    "deletestudent":{
+        "uri": "/school/api/student/:id",
+        "method": "DELETE"
+    },
+    "addstudent": {
+        "uri" : "/school/api/student",
+        "method": "POST"
+    },
+    "addparent": {
+        "uri": "/school/api/parent",
+        "method": "POST"
+    },
+    "editstudent" : {
+        "uri" : "/school/api/student/:id",
+        "method" : "PUT"
+    },
+    "editparent" : {
+        "uri" : "/school/api/parent/:id",
+        "method" : "PUT"
+    },
+    "addtransaction" : {
+        "uri" : "/school/api/transaction",
+        "method" : "POST"
+    },
+    "gettransactions" : {
+        "uri" : "/school/api/transaction",
+        "method" : "GET"
+    }
+}
