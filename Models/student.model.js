@@ -59,7 +59,7 @@ StudentModel.prototype.getStudents = (opts)=>{
     }
 }
 return Promise.resolve(model.find(query,{},options));
-};
+};                  
 StudentModel.prototype.getStudent = (id)=>{
     var model = require('../Database/Student.db');
     var query = {};

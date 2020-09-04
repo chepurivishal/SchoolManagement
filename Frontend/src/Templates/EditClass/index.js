@@ -80,7 +80,8 @@ const EditClass = ({match}) => {
             method: urlConfig.getclass.method,
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `bearer ${token}`
+                'Authorization': `bearer ${token}`,
+                'type': getRole()
             }
         }).then((res) => {
             if (res.status === 200) {
