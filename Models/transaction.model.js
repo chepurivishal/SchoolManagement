@@ -46,7 +46,6 @@ TransactionModel.prototype.getTransactions = (opts)=>{
         }
     }
     return Promise.resolve(model.find(query,{},options)).then(function(res) {
-        console.log('sdafasdfsdafsadfsadfdsafdsfasdfsadfdasfsdaf', res);
         return res;
     });
 };

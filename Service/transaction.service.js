@@ -16,11 +16,12 @@ TransactionService.prototype.getTransactions = (opts) => {
     var transactionModel = require('../Models/transaction.model').getInst();
     if(opts) {
         return transactionModel.getTransactions(opts).then(function(transactions) {
-            console.log("TRANSACTION!!!!!!!!!!!          ", transactions);
             return Promise.map(transactions, function(transaction) {
                 transaction = transaction.toObject(transaction);
                 return resolvetransaction(transaction);
             });
+        }).then(function(res) {
+            return _.compact(res);
         });
     }
 };
@@ -33,13 +34,13 @@ const resolvetransaction = (data) => {
         var studentId = data.studentId;
 
         var getStudentP = studentModel.getStudent(studentId);
-        return Promise.join(getStudentP).spread(function ( student) {
-            student = _.omit(student, ["__v"]);
-            data = _.omit(data, ["studentId", "__v"]);
-            
-            data.student = student;
-            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@",data)
-           return Promise.resolve(data)
+        return Promise.join(getStudentP).spread(function (student) {
+            if(student) {
+                student = _.omit(student, ["__v"]);
+                data = _.omit(data, ["studentId", "__v"]);
+                data.student = student;
+                return Promise.resolve(data);
+            }
         });
 
     }

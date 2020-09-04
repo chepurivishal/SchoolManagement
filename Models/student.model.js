@@ -70,7 +70,6 @@ StudentModel.prototype.getStudent = (id)=>{
         if(data) {
             return data.toObject(data);
         }
-        else return Promise.reject();
     }).then(function(data) {
         return data;
     });
